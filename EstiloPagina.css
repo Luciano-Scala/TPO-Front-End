@@ -1,0 +1,576 @@
+/*-------------------------------------- General------------------------------------------- */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4vw;
+    /*border: 1px solid black;*/
+
+}
+
+a:link, a:visited, a:active {
+text-decoration: none;
+}
+
+h1{
+    text-decoration: underline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2::first-letter{
+
+    font-size: larger;
+}
+
+h2{
+    border-bottom: 2px solid black;
+    border-TOP: 2px solid black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+
+/*--------------------------------------- titutlos-------------------------------------------------- */
+#TitPpal {
+    text-align: center;
+    font-size: 3em;
+    color: white;
+    padding: 1em 1em;
+    background-color: rgba(30, 35, 36, 0.50);
+    margin: 7% auto ;
+    transition: .5s;
+    border: 1px solid rgba(30, 35, 36, 0.01);
+    display: block ;
+    width: 10em;
+   
+}
+
+#TitPpal:hover {
+    background-color: rgba(30, 35, 36, 1);
+    border: 1px solid white;
+    transition: 1s;
+    width: 95%;
+    padding: 1em 0%;
+    font-size: 3.5em;
+    
+}
+
+.titulocentro {
+
+    text-align: center;
+    padding: 1em 1em 1.5em;
+    font-size:  2.5em;
+}
+
+.tituloizq {
+
+    text-align: left;
+    padding: 1em 2em;
+    margin: 2em;
+    font-size: 1.5em;
+}
+
+.tituloder {
+
+    text-align: right;
+    padding: 1em 2em;
+    font-size: 1.5em;
+    margin: 2em;
+}
+
+
+
+
+/*------------------------------------------GRID------------------------------------------*/
+
+
+.grid_container1 {
+    
+    
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "parrafo1 imagen1";
+   
+    align-items: center;
+    column-gap: 1em;
+    margin: 1em; 
+    padding: 1em;
+   
+}
+
+.grid_container2 {
+    
+    
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: auto;
+    grid-template-areas: "imagen2 parrafo2";
+    column-gap: 1em;
+    align-items: center;
+
+    margin: 1em; 
+    padding: 1em;
+   
+}
+
+.grid_container1:hover{
+    background-color: rgba(30, 35, 36, 0.85);
+    color: white;
+    transition: .5s;
+    
+}
+
+.grid_container2:hover{
+    background-color: rgba(30, 35, 36, 0.85);
+    color: white;
+    transition: .5s;
+    
+
+}
+.contenido {
+    
+    background-color: rgba(66, 243, 228, 0.6) ;
+    margin:10%;
+    border-radius: 2em;
+    padding: 2em;
+}
+
+.Gridtxt1 {
+    grid-area: parrafo1;
+    margin: .5em;
+    
+}
+.Gridtxt2 {
+    grid-area: parrafo2;
+    
+}
+
+/*fin grid*/
+
+
+.fondo {
+    background-image: url("mi\ pagina/Planeta.jpg");
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 1;
+    position: static;
+    
+}
+
+
+.Grid_FPtxt {
+    padding: 1em 2em;
+
+
+    
+}
+
+
+
+
+
+
+/*------------------------------------- parte de imagenes con hover -----------------------------*/
+
+.imagen {
+    opacity: 1;
+  display: block;
+ 
+  width: 100%;
+  transition: 1s;
+  border-radius: 5%;
+  
+}
+
+.imagen:hover {
+    border-radius: 50%;
+
+}
+
+.imagenFP {
+    opacity: 1;
+    width: 100%;
+  transition: 1s ease;
+  backface-visibility: hidden;
+  
+}
+
+
+.Gridim1 {
+    grid-area: imagen1;
+    position: relative;
+    padding: 1em;
+    justify-content: center;
+}
+
+.Gridim2 {
+    grid-area: imagen2;
+    position: relative;
+    justify-content: center;
+    
+}
+
+
+
+.middle {
+    position: absolute;
+    transition: 1s ease;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    left:50%;
+    top: 50%;
+  }
+
+.Gridim1:hover .imagenFP {
+    opacity: 60%;
+    
+    border-radius: 10%;
+}
+
+.Gridim1:hover .middle {
+    opacity: 1;
+}
+
+.Gridim2:hover .imagenFP {
+    opacity: 60%;
+    
+    border-radius: 10%;
+}
+
+.Gridim2:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 0.75em;
+    padding: 32px 32px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    
+}
+
+/*------------------------------------------------ Mi NAV------------------------------------------ */
+
+
+
+
+ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(51, 51, 51, 1);
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+   
+}
+
+li {
+    float: inline-start;
+    display: flex;
+    flex-direction: row;
+
+
+   
+  }
+  
+  li a, .cascadabtn  {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+
+
+
+  }
+  
+  li a:hover, .cascada:hover .cascadabtn {
+    background-color: #111;
+    color: white;
+
+    
+
+
+  }
+
+  li.cascada {
+    display: inline-block;
+    min-width: 160px;
+
+   
+  }
+
+  .contenidocascada {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+  }
+
+  .contenidocascada a {
+      border: 1px solid black;
+      color: black;
+        padding: 16px;
+       
+        display: block;
+        text-align: center;
+  }
+
+  .cascada:hover .contenidocascada {
+    display: block
+  
+   
+
+  }
+
+
+  /*------------------------------Formulario---------------------------------------*/
+
+  #form {
+   
+    color: black;
+    padding: 2em;
+    margin: 10%;
+    background-color: rgba(66, 243, 228, 0.6) ;
+    transition: 0.5s;
+}
+
+#form:hover{
+    background-color: rgba(30, 35, 36, 0.85);
+    color: white;
+    transition: .5s;
+
+}
+
+
+  
+
+ #form label{
+    text-decoration: underline;
+   
+
+ }
+
+ #Coment {
+    height: 100px;
+
+ }
+
+  
+  #titform  {
+    color: white;
+    background-color: rgba(51, 51, 51,.50);
+    padding: 1em;
+    border-bottom: 0;
+    border-TOP: 0;
+    margin: 2.5em 2em 1em ;
+   
+  }
+
+  
+  #fecha{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  #gen2{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .radio {
+      padding: 1em;
+  }
+
+  
+
+
+  
+  /*------------------------FOOTER---------------------------------*/
+
+  .Footer {
+      position: absolute;
+    padding: 15px;
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51,1);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 1em;
+    color: white;
+    align-items: center;
+   
+}
+
+
+.Footer div {
+    text-align: center;
+    font-size: 16px;
+
+    
+}
+.Footer h3{
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.Footer a{
+    color: white;
+}
+
+
+.Footer a:hover {
+    color: yellow;
+
+    font-size: 20px;
+    
+}
+
+.Footer i:hover{
+    font-size: 40px;
+    color: yellow;
+}
+
+.Footer i, .Footer a{
+    transition: .75s ;
+    font-size: 16px;
+
+
+}
+
+
+
+#ubi {
+    grid-row: 1;
+    grid-column: 2 ;
+}
+
+#redes {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#tw {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+#ig {
+    grid-column: 1;
+    grid-row: 3;
+
+}
+
+#frame{
+    grid-row: 2 / 4;
+    grid-column:2;
+    width: 100%;
+    border: 2px solid black;
+    
+    
+}
+
+#contacto{
+    grid-row: 1;
+    grid-column: 3;
+}
+
+#tel{
+    grid-row: 3;
+    grid-column: 3;
+}
+
+#mail{
+    grid-row: 2;
+    grid-column: 3;
+
+}
+
+
+/* ------------------------------------- Resposive ------------------------------------- */
+
+@media all and (max-width: 960px) {
+    
+    * {
+        font-size: 1.5vmax ;
+    }
+
+    .grid_container1{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .grid_container2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        max-width: 160px ;
+    }
+
+    ul {
+    display: none; 
+    
+    right: 70%;
+    }
+
+    #menu{
+        list-style-type: none;
+        margin-top: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgba(51, 51, 51, 1);
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 0;
+        position: fixed;
+        color: white;
+        text-align: center;
+       }
+
+       #menu > i{
+        padding: 5px;
+        font-size: 2em;
+
+       }
+       #menu:hover ul{
+           display:flex;
+           flex-direction: column;
+           
+        }
+
+        .contenidocascada {
+            left: 30%;
+
+        }
+        li a, .cascadabtn  {
+    
+            padding: 10px 10px;
+            font-size: 10px;
+        
+          }
+       
+       
+
+}

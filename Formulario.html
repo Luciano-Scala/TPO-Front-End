@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulario de Reclutamiento</title>
+    <link rel="icon" href="mi pagina/Galaxia icono.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="EstiloPagina.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+
+</head>
+
+<body class="fondo">
+    <div id="menu"><i class="fas fa-bars"></i></div>
+
+    <script src="header.js"></script>
+
+    <h2 class="titulocentro" id="titform">Unítenos!</h2>
+
+
+    <form class="form-horizontal" action="" id="form" >
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="LNombre" >Nombre:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="Nombre" placeholder="Ejemplo: Juan"  >
+               
+            </div>
+            
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="LApe">Apellido:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="Ape" placeholder="Ejemplo: Sanchez">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="Lemail">Email:</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="Ejemplo: JS1234@algo.com">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="Lpwd">Contraseña:</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="pwd"
+                    placeholder="Introduzca una contraseña: Ejemplo:AmoElEspacio">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="Lcpwd">Confirmar contraseña:</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="cpwd" placeholder="Confirme su contraseña">
+            </div>
+        </div>
+
+        <div class="form-group" id="Gen">
+            <label class="control-label col-sm-2" for="LGen">Género:</label>
+            <div class="col-sm-offset-2 col-sm-10" id="gen2">
+
+                <div class="radio">
+                    <label><input type="radio" name="optradio" checked>Masculino</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Femenino</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Otros/No Binarie</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="Lfecha">Fecha de naciemiento:</label>
+            <div class="col-sm-10" id="fecha">
+                <select class="form-control" id="dia">
+
+                </select>
+                <select class="form-control" id="mes">
+
+                </select>
+                <select class="form-control" id="año"> </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="LTel">Telefono:</label>
+            <div class="col-sm-10">
+                <input type="tel" class="form-control" id="Tel" placeholder="Ejemplo: (4)555-5555">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="LComent">Comentarios:</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="Coment"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label><input type="checkbox"> ¿Recibir notificaciones?</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default" id="enviar">Enviar</button>
+            </div>
+        </div>
+    </form>
+
+
+    <script src="calculos.js"></script>
+
+
+    <div id="Footer">
+        <footer1></footer1>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <script src="Footer.js"></script>
+    <script src="validación.js"></script>
+
+
+</body>
+
+</html>
