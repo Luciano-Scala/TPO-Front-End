@@ -511,7 +511,7 @@ li {
 @media (max-device-width: 960px) {
     
     * {
-        font-size: 1.5vmax ;
+        font-size: 20px ;
     }
 
     .grid_container1{
@@ -567,10 +567,12 @@ li {
         li a, .cascadabtn  {
     
             padding: 10px 10px;
-            font-size: 10px;
+            font-size: 20px;
         
           }
-       
+       .contenido{
+           margin:0;
+    }
        
 
 }
