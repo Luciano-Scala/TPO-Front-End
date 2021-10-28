@@ -525,7 +525,7 @@ li {
     }
 
     img {
-        max-width: 160px ;
+        max-width: 200px ;
     }
 
     ul {
@@ -570,8 +570,9 @@ li {
             font-size: 20px;
         
           }
+    
        .contenido{
-           margin:0;
+           margin:5px;
     }
        
 
