@@ -508,7 +508,7 @@ li {
 
 /* ------------------------------------- Resposive ------------------------------------- */
 
-@media all and (max-width: 960px) {
+@media (max-device-width: 960px) {
     
     * {
         font-size: 1.5vmax ;
