@@ -2,13 +2,16 @@
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.4vw;
-    /*border: 1px solid black;*/
+    /* border: 1px solid black; */
 
 }
 
 a:link, a:visited, a:active {
-text-decoration: none;
+text-decoration: none !important;
+
 }
+
+
 
 h1{
     text-decoration: underline;
@@ -24,6 +27,11 @@ h2{
     border-bottom: 2px solid black;
     border-TOP: 2px solid black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -63,17 +71,17 @@ h2{
 .tituloizq {
 
     text-align: left;
-    padding: 1em 2em;
-    margin: 2em;
+    padding: 2em;
+    margin: 1em;
     font-size: 1.5em;
 }
 
 .tituloder {
 
     text-align: right;
-    padding: 1em 2em;
+    padding: 2em;
     font-size: 1.5em;
-    margin: 2em;
+    margin: 1em;
 }
 
 
@@ -160,12 +168,7 @@ h2{
 }
 
 
-.Grid_FPtxt {
-    padding: 1em 2em;
 
-
-    
-}
 
 
 
@@ -208,6 +211,7 @@ h2{
 .Gridim2 {
     grid-area: imagen2;
     position: relative;
+    padding: 1em;
     justify-content: center;
     
 }
@@ -284,11 +288,11 @@ li {
   
   li a, .cascadabtn  {
     display: block;
-    color: white;
+    color: white ;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
 
 
 
@@ -322,7 +326,7 @@ li {
 
   .contenidocascada a {
       border: 1px solid black;
-      color: black;
+      color: black ;
         padding: 16px;
        
         display: block;
@@ -360,6 +364,7 @@ li {
 
  #form label{
     text-decoration: underline;
+
    
 
  }
@@ -406,6 +411,7 @@ li {
       position: absolute;
     padding: 15px;
     left: 0;
+   
     right: 0;
     background-color: rgba(51, 51, 51,1);
     display: grid;
@@ -420,7 +426,7 @@ li {
 
 .Footer div {
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
 
     
 }
@@ -429,7 +435,7 @@ li {
     padding: 0;
     margin: 0;
     text-align: center;
-    font-size: 18px;
+    font-size: 22px;
 
 }
 
@@ -505,27 +511,31 @@ li {
 
 }
 
-
-/* ------------------------------------- Resposive ------------------------------------- */
-
-@media (max-device-width: 960px) {
+ /* ------------------------------------- Resposive ------------------------------------- */
+ @media (min-device-width: 480px) and (max-device-width: 960px)  {
     
-    * {
-        font-size: 20px ;
-    }
+   *{
+       font-size: 20px;
+   }
+
+   
 
     .grid_container1{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
     }
     
     .grid_container2{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 
     img {
-        max-width: 200px ;
+        max-width: 1fr ;
+        min-width: 200px;
     }
 
     ul {
@@ -551,29 +561,141 @@ li {
 
        #menu > i{
         padding: 5px;
-        font-size: 2em;
+        font-size: 3em;
 
        }
        #menu:hover ul{
            display:flex;
            flex-direction: column;
            
+           
+        }
+        li{
+            border: 2px solid black;
         }
 
         .contenidocascada {
             left: 30%;
 
         }
-        li a, .cascadabtn  {
+       /*  li a, .cascadabtn  {
     
-            padding: 15px 20px;
-            font-size: 1em;
+            padding: 10px 10px;
+            font-size: 20px;
         
-          }
-    
-       .contenido{
-           margin:5px;
-    }
+          } */
+          .text {
+           
+            font-size: 15px;
+           
+        }
+        label {
+          
+            padding: 1em;
+            margin: 1em;
+        
+        }
+        .Form > div{
+            display: flex;
+            flex-direction: column;
+           
+
+        }
+
+       
+       
        
 
 }
+
+@media (max-device-width: 480px){
+
+
+    *{
+        font-size: 20px;
+    }
+
+
+    .grid_container1{
+        display: flex;
+        flex-direction: column;
+       
+        
+    }
+    
+    .grid_container2{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+  label {
+        padding: 1em;
+        margin: 1em;
+       
+
+    }
+
+    img {
+        max-width: 400px ;
+        min-width: 200px;
+    }
+
+    ul {
+    display: none; 
+    
+    right: 70%;
+    }
+
+    #menu{
+        list-style-type: none;
+        margin-top: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgba(51, 51, 51, 1);
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 0;
+        position: fixed;
+        color: white;
+        text-align: center;
+       }
+
+       #menu > i{
+        padding: 5px;
+        font-size: 3em;
+
+       }
+       #menu:hover ul{
+           display:flex;
+           flex-direction: column;
+           
+           
+        }
+        li{
+            border: 2px solid black;
+        }
+
+        .contenidocascada {
+            left: 30%;
+
+        }
+       /*  li a, .cascadabtn  {
+    
+            padding: 10px 10px;
+            font-size: 20px;
+        
+          } */
+          .text {
+           
+            font-size: 15px;
+           
+        }
+        .contenido{
+            margin: 10% 0px;
+            border-radius: 0;
+        }
+}
+
+

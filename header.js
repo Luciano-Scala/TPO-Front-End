@@ -9,10 +9,10 @@ const secciones = [{
   
 }, {
   seccion: 'Planetas',
-  ruta: 'pestaña de planetas.html'
+  ruta: '#planet'
 }, {
   seccion: 'Constelaciones',
-  ruta: 'pestaña de constelaciones.html'
+  ruta: '#const'
 },
 
 {
@@ -25,6 +25,9 @@ const secciones = [{
 }]
 
 const cascada1 = [{
+  planeta: 'General',
+  ruta: 'pestaña de planetas.html'
+},{
   planeta: 'Mercurio',
   ruta: 'pestaña de planetas.html#Mercurio'
 },{
@@ -57,6 +60,9 @@ planeta: 'Urano',
 ]
 
 const cascada2 = [{
+  constelacion: 'General',
+  ruta: 'pestaña de constelaciones.html'
+},{
   constelacion: 'Orión',
   ruta: 'pestaña de constelaciones.html#Orion'
 },{
